@@ -36,8 +36,8 @@
                     <h3 class="card-title">{{ $posts[0]->title }}</h3>
                     <small class="text-muted">
                         By <a class="text-decoration-none"
-                            href="/posts?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in <a
-                            href="/posts?category={{ $posts[0]->category->slug }}"
+                            href="/posts?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in
+                        <a href="/posts?category={{ $posts[0]->category->slug }}"
                             class="text-decoration-none">{{ $posts[0]->category->name }}</a>
                         {{ $posts[0]->created_at->diffForHumans() }}
                     </small>
@@ -88,4 +88,5 @@
         <div class="d-flex justify-content-end">
             {{ $posts->links() }}
         </div>
-    @endsection
+    </div>
+@endsection

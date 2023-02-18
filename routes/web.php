@@ -8,23 +8,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home",
-        "active" => "Home"
-    ]);
-});
-
-Route::get('/profile', function () {
-    return view('profile', [
-        "name" => "Hanif Aji Prasetyo",
-        "email" => "hanifaja@gmail.com",
-        "image" => "luffy.jpg",
-        "title" => "Profile",
-        "active" => "Profile"
-    ]);
-});
-
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
@@ -42,6 +25,17 @@ Route::get('/categories', function () {
         'title' => 'Post Categories',
         'active' => 'Categories',
         'categories' => Category::all()
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "Hanif Aji Prasetyo",
+        "email" => "hanifaji007@gmail.com",
+        "image" => "profile1.jpeg",
+        "title" => "About",
+        "active" => "About",
+        "school" => "Politeknik Negeri Malang"
     ]);
 });
 

@@ -3,13 +3,13 @@
 @section('container')
     <div class="container">
         <div class="row justify-content-center">
-            <a href="/posts" class="d-block mt-3 text-decoration-none fw-bold">⇐ Back to Posts</a>
+            <a href="/" class="d-block mt-3 text-decoration-none fw-bold">⇐ Back to Posts</a>
             <div class="col-md-8">
                 <h2 class="text-center mb-4 mt-3">{{ $post->title }}</h2>
                 <p>By <a class="text-decoration-none"
-                        href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
+                        href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a>
                     in
-                    <a href="/posts?category={{ $post->category->slug }}"
+                    <a href="/?category={{ $post->category->slug }}"
                         class="text-decoration-none">{{ $post->category->name }}</a>
                 </p>
 

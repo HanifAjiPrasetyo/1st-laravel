@@ -8,7 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
 // Route::get('/categories/{category:slug}', function (Category $category) {

@@ -12,7 +12,7 @@
             <ul class="navbar-nav rounded-3 px-4 ms-3 fw-normal">
                 <li class="nav-item">
                     <a class="nav-link {{ $active === 'Posts' ? 'active' : '' }}" aria-current="page"
-                        href="/posts">Posts</a>
+                        href="/">Posts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ $active === 'Categories' ? 'active' : '' }}" aria-current="page"

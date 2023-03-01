@@ -6,7 +6,7 @@
     </h2>
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="/posts">
+            <form action="/">
                 @if (request('category'))
                     <input type="hidden" name="category" value="{{ request('category') }}">
                 @endif
@@ -36,8 +36,8 @@
                     <h3 class="card-title">{{ $posts[0]->title }}</h3>
                     <small class="text-muted">
                         By <a class="text-decoration-none"
-                            href="/posts?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in
-                        <a href="/posts?category={{ $posts[0]->category->slug }}"
+                            href="/?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in
+                        <a href="/?category={{ $posts[0]->category->slug }}"
                             class="text-decoration-none">{{ $posts[0]->category->name }}</a>
                         {{ $posts[0]->created_at->diffForHumans() }}
                     </small>
@@ -69,7 +69,7 @@
                                     <h3 class="card-title">{{ $post->title }}</h3>
                                     <small class="text-muted">
                                         By <a class="text-decoration-none"
-                                            href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
+                                            href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a>
                                         {{ $post->created_at->diffForHumans() }}
                                     </small>
                                     <p>{!! $post->excerpt !!}</p>

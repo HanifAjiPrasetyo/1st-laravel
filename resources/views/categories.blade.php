@@ -8,7 +8,7 @@
         <div class="row">
             @foreach ($categories as $c)
                 <div class="col-md-4">
-                    <a href="/posts?category={{ $c->slug }}">
+                    <a href="/?category={{ $c->slug }}">
                         <div class="card text-light">
                             <img src="https://source.unsplash.com/500x500?{{ $c->name }}" class="card-img"
                                 alt="{{ $c->name }}">
